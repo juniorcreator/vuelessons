@@ -30,6 +30,9 @@ export default {
         this.smothies = this.smothies.filter((smothie) => {
         return smothie.id != id;
       })
+      }).
+      then(() => {
+        console.log('deleted');
       })
     }
   },
