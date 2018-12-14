@@ -15,22 +15,34 @@
 </template>
 
 <script>
+  import db from "@/firebase/init"
 export default {
   name: 'Index',
   data () {
     return {
-        smothies: [
-        {title: 'Ninja brew', slug: 'ninja-brew', ingredients: ['bananas','coffee', 'milk'], id: 1},
-        {title: 'Morning mood', slug: 'morning-mood', ingredients: ['bananas','cheese', 'orange'], id: 2},
-        ],
+        smothies: [],
     }
   },
   methods: {
-    deleteSmosie(smothieId) {
-      this.smothies = this.smothies.filter((smothie) => {
-        return smothie.id != smothieId;
+    deleteSmosie(id) {
+      db.collection('smoothies').doc(id).delete().
+      then(() => {
+        this.smothies = this.smothies.filter((smothie) => {
+        return smothie.id != id;
+      })
       })
     }
+  },
+  created() {
+    // fetch data from the firestire
+    db.collection('smoothies').get().
+    then(snapshot => {
+      snapshot.forEach(doc => {
+        let docs = doc.data();
+        docs.id = doc.id;
+        this.smothies.push(docs);
+      })
+    })
   }
 }
 </script>

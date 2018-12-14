@@ -12,6 +12,6 @@ import firestore from "firebase/firestore"
   const firebaseApp = firebase.initializeApp(config);
 
   /// if has some errors
-firebaseApp.firestore().settings({timestampsInsSnapshots: true });
+firebaseApp.firestore().settings({timestampsInSnapshots: true });
 
 export default firebaseApp.firestore();
