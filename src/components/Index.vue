@@ -37,7 +37,6 @@ export default {
       })
       }).
       then(() => {
-        console.log('deleted');
       })
     }
   },
