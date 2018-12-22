@@ -2,12 +2,12 @@ import firebase from "firebase"
 import firestore from "firebase/firestore"
 // Initialize Firebase
   var config = {
-    apiKey: "AIzaSyBOFAfmJYelemp_l9AG_xdsXpWLR05m9mI",
-    authDomain: "smoothies-fdee5.firebaseapp.com",
-    databaseURL: "https://smoothies-fdee5.firebaseio.com",
-    projectId: "smoothies-fdee5",
-    storageBucket: "smoothies-fdee5.appspot.com",
-    messagingSenderId: "797869548631"
+    apiKey: "AIzaSyBu3oDIKfg-AJL6SU_2xkJDjjQjkyucXLk",
+    authDomain: "day-tasks-777.firebaseapp.com",
+    databaseURL: "https://day-tasks-777.firebaseio.com",
+    projectId: "day-tasks-777",
+    storageBucket: "day-tasks-777.appspot.com",
+    messagingSenderId: "766420066986"
   };
   const firebaseApp = firebase.initializeApp(config);
 

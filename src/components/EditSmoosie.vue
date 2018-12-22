@@ -47,7 +47,7 @@
               lower: true,
             });
 
-            db.collection('smoothies').add({
+            db.collection('smoothies').doc(this.id).update({
               title: this.smoosies.title,
               slug: this.smoosies.slug,
               ingredients: this.smoosies.ingredients
